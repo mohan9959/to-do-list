@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do list</title>
+</head>
+<body>
+    <h1>HAVE A NICE DAY</h1><br>
+<%if (today==="SATURDAY" || today ==="SUNDAY"){ %>
+    <h1 style="color: rgb(90, 247, 0);">Today is <%= today %></h1>
+<%} else { %>
+    <!-- <h1 style="color:red;">Today is <%= today %></h1> -->
+<% }%>
+
+
+<h1 style="color:rgb(233, 145, 31);"> Today's Date (dd-mm-yyyy): <%=today1 %> </h1><br><br>
+<h1>Today's list of activities can write here:</h1>
+
+<% for (var i=0; i<newitem.length;i++){ %>
+    <li><%= newitem[i] %></li>
+<% } %>
+
+<form method="post" action="/">
+    <input type="text" placeholder="Enter your task " name="new">
+    <button type="submit"> ADD TASK</button>
+</form>
+    
+</body>
+</html>
